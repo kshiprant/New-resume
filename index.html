@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kshiprant | Interactive Resume</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>KSHIPRANT SISODIYA</h1>
+    <button id="downloadBtn">Download PDF</button>
+</header>
+
+<nav>
+    <ul>
+        <li onclick="scrollToSection('work')">Work</li>
+        <li onclick="scrollToSection('education')">Education</li>
+        <li onclick="scrollToSection('skills')">Skills</li>
+        <li onclick="scrollToSection('contact')">Contact</li>
+    </ul>
+</nav>
+
+<section class="profile">
+    <div class="profile-card">
+        <img src="profile.jpg" alt="Profile">
+        <p>Forensic Specialist | Executive Assistant | System Thinker</p>
+    </div>
+</section>
+
+<section id="work" class="section expandable">
+    <h2 onclick="toggleSection(this)">WORK EXPERIENCE</h2>
+    <div class="content">
+        <div class="timeline">
+            <div class="item">
+                <span>Digital Forensic Examiner</span>
+                <p>SysTools Pvt Ltd - Bangalore</p>
+            </div>
+            <div class="item">
+                <span>Executive Assistant</span>
+                <p>MMC Convert - Indore</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="section expandable">
+    <h2 onclick="toggleSection(this)">EDUCATION</h2>
+    <div class="content">
+        <p>Post Graduation in Forensic Science</p>
+        <p>Undergraduate in Bioinformatics</p>
+    </div>
+</section>
+
+<section id="skills" class="section expandable">
+    <h2 onclick="toggleSection(this)">SOFTWARE SKILLS</h2>
+    <div class="content skills">
+        <div class="skill">Magnet AXIOM</div>
+        <div class="skill">Digital Forensics</div>
+        <div class="skill">VAPT (Learning)</div>
+        <div class="skill">System Documentation</div>
+    </div>
+</section>
+
+<section id="contact" class="section expandable">
+    <h2 onclick="toggleSection(this)">CONTACT</h2>
+    <div class="content">
+        <p>Email: yourmail@gmail.com</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+    </div>
+</section>
+
+<footer>
+    Developed by Kshiprant
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
