@@ -24,7 +24,7 @@ body {
   position: fixed;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 40px;
   backdrop-filter: blur(10px);
   background: rgba(0,0,0,0.4);
