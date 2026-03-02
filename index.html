@@ -5,75 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kshiprant | Interactive Resume</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>KSHIPRANT SISODIYA</h1>
-    <button id="downloadBtn">Download PDF</button>
-</header>
+<div class="grid-bg"></div>
 
-<nav>
-    <ul>
-        <li onclick="scrollToSection('work')">Work</li>
-        <li onclick="scrollToSection('education')">Education</li>
-        <li onclick="scrollToSection('skills')">Skills</li>
-        <li onclick="scrollToSection('contact')">Contact</li>
-    </ul>
+<nav class="navbar">
+  <div class="logo">KS</div>
+  <ul>
+    <li onclick="scrollToSection('about')">About</li>
+    <li onclick="scrollToSection('experience')">Experience</li>
+    <li onclick="scrollToSection('skills')">Skills</li>
+    <li onclick="scrollToSection('projects')">Projects</li>
+    <li onclick="scrollToSection('contact')">Contact</li>
+  </ul>
 </nav>
 
-<section class="profile">
-    <div class="profile-card">
-        <img src="profile.jpg" alt="Profile">
-        <p>Forensic Specialist | Executive Assistant | System Thinker</p>
-    </div>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Kshiprant Sisodiya</h1>
+    <p>Forensic Specialist • Systems Thinker • Tech Strategist</p>
+    <button onclick="window.print()">Download CV</button>
+  </div>
+
+  <div class="hero-illustration">
+    <div class="tech-boy"></div>
+  </div>
 </section>
 
-<section id="work" class="section expandable">
-    <h2 onclick="toggleSection(this)">WORK EXPERIENCE</h2>
-    <div class="content">
-        <div class="timeline">
-            <div class="item">
-                <span>Digital Forensic Examiner</span>
-                <p>SysTools Pvt Ltd - Bangalore</p>
-            </div>
-            <div class="item">
-                <span>Executive Assistant</span>
-                <p>MMC Convert - Indore</p>
-            </div>
-        </div>
-    </div>
+<section id="about" class="section reveal">
+  <h2>About Me</h2>
+  <p>
+    Digital Forensic Examiner with structured system thinking and executive coordination expertise.
+    Focused on building secure, scalable and intelligent systems.
+  </p>
 </section>
 
-<section id="education" class="section expandable">
-    <h2 onclick="toggleSection(this)">EDUCATION</h2>
-    <div class="content">
-        <p>Post Graduation in Forensic Science</p>
-        <p>Undergraduate in Bioinformatics</p>
+<section id="experience" class="section reveal">
+  <h2>Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="content">
+        <h3>Digital Forensic Examiner</h3>
+        <p>SysTools Pvt Ltd – Bangalore</p>
+      </div>
     </div>
+
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="content">
+        <h3>Executive Assistant</h3>
+        <p>MMC Convert – Indore</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="skills" class="section expandable">
-    <h2 onclick="toggleSection(this)">SOFTWARE SKILLS</h2>
-    <div class="content skills">
-        <div class="skill">Magnet AXIOM</div>
-        <div class="skill">Digital Forensics</div>
-        <div class="skill">VAPT (Learning)</div>
-        <div class="skill">System Documentation</div>
+<section id="skills" class="section reveal">
+  <h2>Skills</h2>
+
+  <div class="skills-container">
+    <div class="skill-circle" data-percent="90">
+      <svg>
+        <circle cx="60" cy="60" r="50"></circle>
+        <circle cx="60" cy="60" r="50" class="progress"></circle>
+      </svg>
+      <span>Forensics</span>
     </div>
+
+    <div class="skill-circle" data-percent="75">
+      <svg>
+        <circle cx="60" cy="60" r="50"></circle>
+        <circle cx="60" cy="60" r="50" class="progress"></circle>
+      </svg>
+      <span>VAPT</span>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="section expandable">
-    <h2 onclick="toggleSection(this)">CONTACT</h2>
-    <div class="content">
-        <p>Email: yourmail@gmail.com</p>
-        <p>Phone: +91-XXXXXXXXXX</p>
+<section id="projects" class="section reveal">
+  <h2>Projects</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Digital Fority SOP</h3>
+      <p>Structured forensic operating procedure v2.0</p>
     </div>
+  </div>
+</section>
+
+<section id="contact" class="section reveal">
+  <h2>Contact</h2>
+  <p>Email: yourmail@gmail.com</p>
 </section>
 
 <footer>
-    Developed by Kshiprant
+  Developed by Kshiprant
 </footer>
 
 <script src="script.js"></script>
